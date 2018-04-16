@@ -6,11 +6,12 @@ package postpc.huji.selfchat;
 
 public class Message {
 
-    private String mName, mText;
+    private String mName, mText, mTimeStamp;
 
     public Message(String mName, String mText) {
         this.mName = mName;
         this.mText = mText;
+        this.mTimeStamp = Utils.generateTimeStamp();
     }
 
     public String getName() {
@@ -19,6 +20,10 @@ public class Message {
 
     public String getText() {
         return mText;
+    }
+
+    public String getTimeStamp() {
+        return mTimeStamp;
     }
 }
 
