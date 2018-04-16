@@ -34,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateNumberOfTaps() {
-        if (counter % 7 == 0 && counter != 0)
+        if ((counter % 7 == 0 && counter != 0) || String.valueOf(counter).contains("7"))
             textView.setText("B O O M");
         else
             textView.setText(String.valueOf(counter));
 
     }
+
+
 }
